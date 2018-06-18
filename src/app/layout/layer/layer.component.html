@@ -1,0 +1,19 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzCollapsedWidth]="0" [nzBreakpoint]="'lg'">
+    <app-siderbar></app-siderbar>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="background: #fff; padding:0;">
+      <app-header></app-header>
+    </nz-header>
+    <nz-content style="margin:0 16px 24px 16px;">
+      <div style="padding:0 16px; min-height: 360px;">
+        <router-outlet></router-outlet>
+
+      </div>
+    </nz-content>
+    <nz-footer style="text-align: center;">
+      <app-footer></app-footer>
+    </nz-footer>
+  </nz-layout>
+</nz-layout>

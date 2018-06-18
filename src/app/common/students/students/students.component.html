@@ -1,0 +1,78 @@
+<div [@fadeIn] class="a-wrap"  >
+
+  <div class="nav_bar" >
+    <nz-breadcrumb nzSeparator=">">
+      <nz-breadcrumb-item>
+        考生
+      </nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        考生成绩统计
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </div>
+
+  <div style="padding: 16px 5px; background: #fff;   min-height: 360px;" >
+    <div nz-row >
+      <div nz-col nzXs="24" nzSm="24" nzMd="6" nzLg="24" nzXl="24" style="margin-bottom: 10px;">
+        <nz-select style="width: 200px;" nzShowSearch nzAllowClear nzPlaceHolder="Select a person" >
+          <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+          <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+          <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+        </nz-select>
+      </div>
+      <div nz-col nzXs="24" nzSm="24" nzMd="6" nzLg="24" nzXl="24">
+        <form nz-form [nzLayout]="'inline'" >
+          <nz-form-item >
+            <nz-form-label  nzFor="class">年级</nz-form-label>
+            <nz-form-control>
+              <nz-select style="width: 120px;"  nzAllowClear nzPlaceHolder="Choose">
+                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item >
+          <nz-form-item >
+            <nz-form-label  nzFor="class">学科</nz-form-label>
+            <nz-form-control>
+              <nz-select style="width: 120px;"  nzAllowClear nzPlaceHolder="Choose">
+                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item >
+          <nz-form-item >
+            <nz-form-label  nzFor="class">类别</nz-form-label>
+            <nz-form-control>
+              <nz-select style="width: 120px;" nzAllowClear nzPlaceHolder="Choose">
+                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item >
+          <nz-form-item >
+            <nz-form-label  nzFor="class">专业</nz-form-label>
+            <nz-form-control>
+              <nz-select style="width: 120px;"  nzAllowClear nzPlaceHolder="Choose">
+                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </nz-form-item >
+          <nz-form-item >
+            <nz-input-group nzSearch nzSize="large" [nzSuffix]="suffixButton">
+              <input type="text" nz-input placeholder="input search text">
+            </nz-input-group>
+            <ng-template #suffixButton>
+              <button nz-button nzType="primary" nzSize="large" nzSearch>Search</button>
+            </ng-template>
+
+          </nz-form-item >
+
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
