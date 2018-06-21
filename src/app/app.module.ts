@@ -18,6 +18,7 @@ import { WelcomeComponent } from './common/welcome/welcome.component';
 import { StudentsComponent } from './common/students/students/students.component';
 import { ClassesComponent } from './common/classes/classes/classes.component';
 import {CommonService } from './services/common/common.service';
+import { ContentComponent } from './layout/content/content.component';
 registerLocaleData(zh);
 
 
@@ -32,7 +33,8 @@ registerLocaleData(zh);
     Code404Component,
     WelcomeComponent,
     StudentsComponent,
-    ClassesComponent
+    ClassesComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

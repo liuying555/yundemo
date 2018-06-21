@@ -21,55 +21,25 @@
         </nz-select>
       </div>
       <div nz-col nzXs="24" nzSm="24" nzMd="6" nzLg="24" nzXl="24">
-        <form nz-form [nzLayout]="'inline'" >
-          <nz-form-item >
-            <nz-form-label  nzFor="class">年级</nz-form-label>
+        <form nz-form [nzLayout]="'inline'">
+          <nz-form-item  *ngFor="let grade of studentSelect">
+            <nz-form-label nzFor="{{grade.gradeName}}">{{grade.gradeName}}</nz-form-label>
             <nz-form-control>
-              <nz-select style="width: 120px;"  nzAllowClear nzPlaceHolder="Choose">
-                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
-                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+              <nz-select style="width: 120px;" nzAllowClear nzPlaceHolder="{{grade.placeHolder}}">
+                <nz-option nzValue="jack" nzLabel="{{class.selectValue}}"  *ngFor="let class of grade.classNum"></nz-option>
               </nz-select>
             </nz-form-control>
-          </nz-form-item >
-          <nz-form-item >
-            <nz-form-label  nzFor="class">学科</nz-form-label>
+          </nz-form-item>
+          <nz-form-item>
             <nz-form-control>
-              <nz-select style="width: 120px;"  nzAllowClear nzPlaceHolder="Choose">
-                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
-                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
-              </nz-select>
+              <nz-input-group nzSearch [nzSuffix]="suffixIconButton">
+                <input type="text" nz-input placeholder="考号和考生姓名检索">
+              </nz-input-group>
+              <ng-template #suffixIconButton>
+                <button nz-button nzType="primary" nzSearch><i class="anticon anticon-search"></i></button>
+              </ng-template>
             </nz-form-control>
-          </nz-form-item >
-          <nz-form-item >
-            <nz-form-label  nzFor="class">类别</nz-form-label>
-            <nz-form-control>
-              <nz-select style="width: 120px;" nzAllowClear nzPlaceHolder="Choose">
-                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
-                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
-              </nz-select>
-            </nz-form-control>
-          </nz-form-item >
-          <nz-form-item >
-            <nz-form-label  nzFor="class">专业</nz-form-label>
-            <nz-form-control>
-              <nz-select style="width: 120px;"  nzAllowClear nzPlaceHolder="Choose">
-                <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
-                <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
-              </nz-select>
-            </nz-form-control>
-          </nz-form-item >
-          <nz-form-item >
-            <nz-input-group nzSearch nzSize="large" [nzSuffix]="suffixButton">
-              <input type="text" nz-input placeholder="input search text">
-            </nz-input-group>
-            <ng-template #suffixButton>
-              <button nz-button nzType="primary" nzSize="large" nzSearch>Search</button>
-            </ng-template>
-
-          </nz-form-item >
-
-
-
+          </nz-form-item>
         </form>
       </div>
     </div>

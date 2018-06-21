@@ -1,0 +1,106 @@
+{
+  "code": "1",
+  "msg": "请求成功",
+  "grade": [
+    {
+      "gradeName":"成绩",
+      "placeHolder":"请选择成绩",
+      "selectId":"50",
+      "classNum":[
+        {
+          "classId":"5001",
+          "selectValue":"联考"
+
+        },
+        {
+          "classId":"5002",
+          "selectValue":"校考"
+        }
+      ]
+    },
+    {
+      "gradeName":"年级",
+      "placeHolder":"请选择年级",
+      "selectId":"10",
+      "classNum":[
+        {
+          "classId":"1001",
+          "selectValue":"全部"
+
+        },
+        {
+          "classId":"1002",
+          "selectValue":"一年级"
+        },
+        {
+          "classId":"1003",
+          "selectValue":"二年级"
+        }
+      ]
+    },
+    {
+      "gradeName":"学科",
+      "placeHolder":"请选择学科",
+      "selectId":"20",
+      "classNum":[
+        {
+          "classId":"2001",
+          "selectValue":"全部"
+
+        },
+        {
+          "classId":"2002",
+          "selectValue":"理科"
+        },
+        {
+          "classId":"2003",
+          "selectValue":"文科"
+        }
+      ]
+    },
+    {
+      "gradeName":"类别",
+      "placeHolder":"请选择类别",
+      "selectId":"30",
+      "classNum":[
+        {
+          "classId":"3001",
+          "selectValue":"不选择"
+
+        },
+        {
+          "classId":"3002",
+          "selectValue":"理科"
+        },
+        {
+          "classId":"3003",
+          "selectValue":"文科"
+        }
+      ]
+    },
+    {
+      "gradeName":"专业",
+      "placeHolder":"请选择专业",
+      "selectId":"40",
+      "classNum":[
+        {
+          "classId":"4001",
+          "selectValue":"不选择"
+
+        },
+        {
+          "classId":"4002",
+          "selectValue":"普通"
+        },
+        {
+          "classId":"4003",
+          "selectValue":"艺术"
+        },
+        {
+          "classId":"4004",
+          "selectValue":"体育"
+        }
+      ]
+    }
+  ]
+}
