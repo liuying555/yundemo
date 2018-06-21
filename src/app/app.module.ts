@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import { WelcomeComponent } from './common/welcome/welcome.component';
 import { StudentsComponent } from './common/students/students/students.component';
 import { ClassesComponent } from './common/classes/classes/classes.component';
 import {CommonService } from './services/common/common.service';
+import {StudentServiceService } from './common/students/students/services/student-service.service';
 import { ContentComponent } from './layout/content/content.component';
 registerLocaleData(zh);
 
@@ -43,10 +44,12 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    HttpClientJsonpModule,
     NgZorroAntdModule.forRoot()
   ],
   providers: [
-    CommonService
+    CommonService,
+    StudentServiceService
   ],
   bootstrap: [AppComponent]
 })
