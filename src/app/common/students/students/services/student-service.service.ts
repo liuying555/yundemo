@@ -7,7 +7,5 @@ export class StudentServiceService {
    }
 
   tableShow() {
-    console.log('11');
   }
-
 }

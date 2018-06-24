@@ -32,6 +32,7 @@
           </nz-form-item>
           <nz-form-item>
             <nz-form-control>
+              <nz-form-label>&nbsp;</nz-form-label>
               <nz-input-group nzSearch [nzSuffix]="suffixIconButton">
                 <input type="text" nz-input placeholder="考号和考生姓名检索">
               </nz-input-group>
@@ -43,6 +44,16 @@
         </form>
       </div>
     </div>
+    <button (click)="requestData();">
+      请求数据
+    </button>
+    <ul>
+      <li *ngFor="let item of list">
+
+
+        {{item.title}}
+      </li>
+    </ul>
   </div>
 
 </div>
