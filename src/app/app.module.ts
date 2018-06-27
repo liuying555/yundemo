@@ -20,6 +20,7 @@ import { ClassesComponent } from './common/classes/classes/classes.component';
 import {CommonService } from './services/common/common.service';
 import {StudentServiceService } from './common/students/students/services/student-service.service';
 import { ContentComponent } from './layout/content/content.component';
+import { LoginService } from './login/services/login.service';
 registerLocaleData(zh);
 
 
@@ -49,7 +50,8 @@ registerLocaleData(zh);
   ],
   providers: [
     CommonService,
-    StudentServiceService
+    StudentServiceService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
