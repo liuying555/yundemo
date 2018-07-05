@@ -14,6 +14,7 @@ import {HttpClient, HttpClientJsonpModule} from '@angular/common/http';
 export class StudentsComponent implements OnInit {
   studentSelect: any;
   public userList: any[];
+  public list: any[];
 
   constructor(private commonService: CommonService , private studentServiceService: StudentServiceService,
               private http: HttpClient, private jsonp: HttpClientJsonpModule ) { }
@@ -22,16 +23,27 @@ export class StudentsComponent implements OnInit {
     this.commonService.studentSelectList().subscribe((result: any ) => {
       this.studentSelect = result.grade ;
     });
-
-    this.studentServiceService.getUserList().subscribe((data) => {
-      console.log(data);
-      this.userList = data.items;
-    });
     this.studentServiceService.tableShow();
-    this.studentServiceService.getBillTypes();
   }
   requestData() {
-    alert();
+   //  alert('请求数据');
+    const  _that = this;
+    const url = "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1";
+    this.http.get(url).subscribe(function(data) {
+
+        console.log(data);
+
+        const list = data;
+      //  console.log(_that.list['result']);
+
+      _that.list = list['result'];
+
+
+    },function (err) {
+
+      console.log(err);
+    });
+
 
   }
 

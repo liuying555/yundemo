@@ -47,14 +47,14 @@
     <button (click)="requestData()">
       请求数据
     </button>
-    <div class="list-group">
-      <a href="#" class="list-group-item active">
-        用户列表
-      </a>
-      <a href="#" class="list-group-item" *ngFor="let user of userList;let i=index;">
-        第{{i+1}}个，用户名：{{user.userName}}
-      </a>
-    </div>
+    <ul>
+      <li *ngFor="let item of list">
+
+
+        {{item.title}}
+      </li>
+    </ul>
+
   </div>
 
 </div>
