@@ -28,7 +28,7 @@ export class StudentsComponent implements OnInit {
   requestData() {
    //  alert('请求数据');
     const  _that = this;
-    const url = "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1";
+    const url = `http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1`;
     this.http.get(url).subscribe(function(data) {
 
         console.log(data);
